@@ -1,3 +1,4 @@
+# Hier werden sämtliche Bibliotheken und Frameworks importiert, die für den Code benötigt werden. Zum Beispiel Serial für die serielle Verbindung, [...] des Sensors 'bme680' 
 import serial
 import bme680
 import time
@@ -6,14 +7,14 @@ import ast
 import RPi.GPIO as GPIO
 
 
-
+# Hier wird die Ampelsteuerungsfunktion erschaffen
 def switch_lights(red, yellow, green):
     GPIO.output(13, red)
     GPIO.output(5, yellow)
     GPIO.output(6, green)
 
 
- # Green: PM 0-30 und CO2 350-450 # Yellow: PM 31-90 und CO2 451-1500 # Red: PM 91-250+ und CO2 1501-30k+
+# Green: PM 0-30 und CO2 350-450 # Yellow: PM 31-90 und CO2 451-1500 # Red: PM 91-250+ und CO2 1501-30k+
 def sync_lights_with_sensor_values():
     if dust >= 91 or obj.co2 >= 1501: 
         switch_lights(GPIO.HIGH, GPIO.LOW, GPIO.LOW) 
