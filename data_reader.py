@@ -20,7 +20,7 @@ def sync_lights_with_sensor_values():
     # Wenn der Feinstaubwert zwischen 91-250µg/m³ der Co2-Wert zwischen 1501-30kppm sowie darüber liegt, leuchtet sie rot
     if dust >= 91 or obj.co2 >= 1501: 
         switch_lights(GPIO.HIGH, GPIO.LOW, GPIO.LOW) 
-        print('ROT', dust,obj.co2)
+        print('ROT')
     # Bei 31-90µg/m³ und 451-1500ppm leuchtet die Ampel gelb
     elif dust >= 31 or obj.co2 >= 451: 
         switch_lights(GPIO.LOW, GPIO.HIGH, GPIO.LOW) 
@@ -77,17 +77,17 @@ sensor.select_gas_heater_profile(0)
 
 # Command to be executed
 command = "sudo python -m mh_z19"
-output = subprocess.check_output(command, shell=True)
-output = output.decode()
-string = output.strip("'")
-dictionary = ast.literal_eval(string)
-obj = type('Object', (object,), dictionary)()
 
 # Hier befindet sich nun die Hauptschleife des Programms, in welcher kontinuierlich in einem zehnsekündigen Rythmus an die Datenbank sendet
 try:
     while True:
         if sensor.get_sensor_data():
             dust = float(arduino.readline().decode().strip())
+            output = subprocess.check_output(command, shell=True)
+            output = output.decode()
+            string = output.strip("'")
+            dictionary = ast.literal_eval(string)
+            obj = type('Object', (object,), dictionary)()
             # Die Lichter werden mit den Daten synchronisiert
             sync_lights_with_sensor_values()
             # Der Loop wird auf zehn Sekunden getimed 
