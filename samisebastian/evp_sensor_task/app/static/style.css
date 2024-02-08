@@ -1,60 +1,61 @@
+/* Stildefinitionen für das Warnsignal */
 #traffic-light {
-  width: 150px;
-  height: 640px;
-  max-height: 100%;
-  background-color: #444;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  box-sizing: border-box;
+  width: 150px; /* Breite des Signals */
+  height: 640px; /* Höhe des Signals */
+  max-height: 100%; /* Maximale Höhe des Signals */
+  background-color: #444; /* Hintergrundfarbe */
+  border-radius: 4px; /* Abgerundete Ecken */
+  display: flex; /* Flexbox-Layout */
+  flex-direction: column; /* Anordnung der Elemente in Spalten */
+  justify-content: space-between; /* Platzierung der Elemente mit gleichem Abstand dazwischen */
+  align-items: center; /* Zentrierung der Elemente horizontal */
+  padding: 10px; /* Innenabstand */
+  box-sizing: border-box; /* Box-Modell, padding und border werden in die Gesamtbreite und -höhe einbezogen */
 }
 
+/* Stildefinitionen für den Warnungsbereich */
 .warning__wrapper {
-  display: flex;
-  flex-direction: column;
+  display: flex; /* Flexbox-Layout */
+  flex-direction: column; /* Anordnung der Elemente in Spalten */
 }
 
+/* Stildefinitionen für die Lichter (rot, gelb, grün) */
 .light {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  opacity: 0.33;
+  width: 80px; /* Breite der Lichter */
+  height: 80px; /* Höhe der Lichter */
+  border-radius: 50%; /* Kreisförmige Form */
+  opacity: 0.33; /* Standard-Deckkraft */
 }
 
+/* Stildefinitionen für das rote Licht */
 .red {
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(255, 0, 0); /* Rote Hintergrundfarbe */
 }
 
+/* Stildefinitionen für das gelbe Licht */
 .yellow {
-  background-color: rgb(255, 255, 0);
+  background-color: rgb(255, 255, 0); /* Gelbe Hintergrundfarbe */
 }
 
+/* Stildefinitionen für das grüne Licht */
 .green {
-  background-color: rgb(0, 255, 0);
+  background-color: rgb(0, 255, 0); /* Grüne Hintergrundfarbe */
 }
 
+/* Aktives Licht mit voller Deckkraft */
 .active {
   opacity: 1;
 }
 
-/* .graph {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; 16:9 aspect ratio (change this value to match your iframe aspect ratio)
-    height: 0;
-    overflow: hidden;
-  } */
-
+/* Stildefinitionen für den Wrapper */
 .wrapper {
-  display: flex;
+  display: flex; /* Flexbox-Layout */
 }
 
+/* Stildefinitionen für das Iframe-Element */
 iframe {
-  width: 10000px;
-  max-width: 100%;
-  height: 750px;
-  max-height: 100%;
+  width: 10000px; /* Breite des Iframe-Elements */
+  max-width: 100%; /* Maximale Breite des Iframe-Elements */
+  height: 750px; /* Höhe des Iframe-Elements */
+  max-height: 100%; /* Maximale Höhe des Iframe-Elements */
 }
