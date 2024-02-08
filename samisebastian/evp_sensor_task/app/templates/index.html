@@ -1,28 +1,36 @@
 <!doctype html>
 <html lang="en">
-
 <head>
+    <!-- Meta-Tags für Zeichensatz und Ansicht -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Verknüpfen mit externer CSS-Datei -->
     <link rel="stylesheet" type="text/css" href="../static/style.css" />
+    <!-- Deferiertes Laden eines JavaScripts -->
     <script defer src="../static/script.js" type="module"></script>
+    <!-- Titel des Dokuments -->
     <title>Document</title>
 </head>
-
 <body>
     <div class="wrapper">
         <div class="info__wrapper">
             <div id="traffic-light">
+                <!-- Ampel-Element mit roter, gelber und grüner Licht-Elementen -->
                 <div class="light red"></div>
                 <div class="light yellow"></div>
                 <div class="light green"></div>
             </div>
+            <!-- Wrapper für Warnungen -->
             <div class="warning__wrapper">
+                <!-- Textwarnung für schlechte Luftqualität -->
                 <p>Achtung, schlechte Luftqualität!</p>
+                <!-- Aufforderung zum Öffnen der Fenster -->
                 <p>Fenster öffnen!</p>
             </div>
         </div>
+        <!-- Histogrambereich -->
         <div class="graph">
+            <!-- Einbettung eines externen Dashboards in einem Iframe -->
             <iframe src="http://localhost:3000/public-dashboards/9d97cd7033ba4c63b60d1a9a3930884f"
                 frameborder="0"></iframe>
         </div>
