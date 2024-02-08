@@ -1,23 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../static/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../static/style.css" />
     <script defer src="../static/script.js" type="module"></script>
     <title>Document</title>
 </head>
 
 <body>
     <div class="wrapper">
-        <div id="traffic-light">
-            <div class="light red"></div>
-            <div class="light yellow"></div>
-            <div class="light green"></div>
+        <div class="info__wrapper">
+            <div id="traffic-light">
+                <div class="light red"></div>
+                <div class="light yellow"></div>
+                <div class="light green"></div>
+            </div>
+            <div class="warning__wrapper">
+                <p>Achtung, schlechte Luftqualität!</p>
+                <p>Fenster öffnen!</p>
+            </div>
         </div>
         <div class="graph">
-            <iframe src="http://localhost:3000/public-dashboards/71d67fecc7904add82b3bf1ee1c740bc"
+            <iframe src="http://localhost:3000/public-dashboards/9d97cd7033ba4c63b60d1a9a3930884f"
                 frameborder="0"></iframe>
         </div>
     </div>
